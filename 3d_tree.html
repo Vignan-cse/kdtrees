@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/kd_tree.css">
+    </head>
+    <title>3D Tree Visualizer</title>
+    <center>
+        <h1>3-Dimensional Tree Visualizer</h1>
+    </center>
+    
+    <div class="row">
+        <div class="column">
+            <center>
+                <canvas id="canvas"
+                        width="500" 
+                        height="500" 
+                        style="border:1px solid #c3c3c3;">
+                    canvas element unsupported
+                </canvas>
+            </center>
+        </div>
+        <div class="column">
+            Insert node:<br>
+            x-value: <input id="x_val" type="text" size=2>
+            y-value: <input id="y_val" type="text" size=2>
+            z-value: <input id="z_val" type="text" size=2>
+            <button onclick="insert_node_button()">Insert Node</button>
+            <button onclick="clear_tree()">Clear</button>
+            <br> <br>
+            <code>
+                N -> {(X,Y,Z),L,R}|null<br>
+                L -> N<br>
+                R -> N<br>
+                where:<br>
+                -N is a node object or null (empty)<br>
+                -X is an integer number representing the x-coordinate of the node [-250,250]<br>
+                -Y is an integer number representing the y-coordinate of the node [-250,250]<br>
+                -Z is an integer number representing the z-coordinate of the node [-250,250]<br>
+                -L is the left child of a node<br>
+                -R is the right child of a node<br>
+            </code>
+        </div>
+    </div>
+    
+    <!--- CODE IMPORTS --->
+    <script src="js/math.js"></script>
+    <script src="js/3d_tree.js"></script>
+</html>
